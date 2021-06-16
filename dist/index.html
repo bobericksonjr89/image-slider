@@ -4,10 +4,48 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Image Slider</title>
+    <title>Baby Buddies</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
+  <body class="body">
+    <header class="header">
+      <h1 class="header__title">Baby Buddy Showcase</h1>
+    </header>
+    <main class="main">
+      <div class="frame">
+        <img
+          class="picture picture--visible"
+          src="images/monkeys.jpg"
+          alt="cute monkey family"
+        />
+        <img src="images/seals.jpg" alt="cute seal family" class="picture" />
+        <img src="images/koalas.jpg" alt="cute kaoala family" class="picture" />
+        <img src="images/horses.jpg" alt="cute horse family" class="picture" />
+        <img src="images/hippos.jpg" alt="cute hippo family" class="picture" />
+      </div>
+      <div class="slider">
+        <div class="slider__buttons">
+          <button class="slider__arrow previous"></button>
+          <button class="dot"></button>
+          <button class="dot"></button>
+          <button class="dot"></button>
+          <button class="dot dot--active"></button>
+          <button class="dot"></button>
+          <button class="slider__arrow next"></button>
+        </div>
+      </div>
+    </main>
     <script src="main.js"></script>
   </body>
 </html>
+
+<!--HIPPOS Image by Christel SAGNIEZ from Pixabay -->
+<!--MONKIES Image by Michael Schwarzenberger from Pixabay-->
+<!--KOALAS Image by Holger Detje from Pixabay-->
+<!--HORSES  Image by Erdenebayar Bayansan from Pixabay-->
+<!--SEALS Image by enriquelopezgarre from Pixabay-->
