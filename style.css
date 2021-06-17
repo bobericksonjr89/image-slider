@@ -37,11 +37,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background: var(--color-honeydew);
 }
 
 .picture {
-  height: 40rem;
-  width: 60rem;
+  height: 35rem;
+  width: 55rem;
   object-fit: cover;
   display: none;
 }
