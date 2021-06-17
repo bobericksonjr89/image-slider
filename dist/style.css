@@ -19,14 +19,17 @@
 .header__title {
   font-family: "Source Sans Pro", sans-serif;
   color: var(--color-honeydew);
-  font-size: 3rem;
+  font-size: 5rem;
+  -webkit-text-stroke: 2px black;
+  margin: 1rem 0;
 }
 
 .main {
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .frame {
@@ -41,19 +44,28 @@
 }
 
 .picture {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
   height: 35rem;
   width: 55rem;
   object-fit: cover;
   display: none;
+  position: relative;
+  animation-name: fadeinout;
+  animation-duration: 5s;
+  animation-fill-mode: ease-in-out;
+  animation-direction: forwards;
+  animation-play-state: paused;
 }
 
 .picture--visible {
+  animation-play-state: running;
   display: block;
 }
 
 .slider {
   margin-top: 1rem;
-  margin-bottom: 3rem;
   border: 2px solid var(--color-celadon);
   border-radius: 2rem;
   box-shadow: 1px 1px 2px 1px var(--color-celadon),
@@ -118,4 +130,55 @@
 
 .dot--active {
   background-color: var(--color-celadon);
+}
+
+/*----------------------
+  ANIMATIONS
+----------------------*/
+
+@keyframes fadeinout {
+  0% {
+    opacity: 0;
+  }
+
+  3% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/*----------------------
+  MEDIA
+----------------------*/
+
+@media only screen and (max-width: 62.5rem) {
+  .body {
+    width: 100%;
+  }
+
+  .header__title {
+    -webkit-text-stroke: rgb(241, 250, 238);
+    font-size: 2rem;
+  }
+
+  .frame {
+    height: 13.33rem;
+    width: 20rem;
+  }
+
+  .picture {
+    height: 11.45rem;
+    width: 18rem;
+  }
 }
